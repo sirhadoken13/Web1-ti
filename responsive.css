@@ -7,10 +7,22 @@
 header{
     background-color: #cdcdcd;
     padding:25px;
+    text-align: center;
 }
 footer{
     background-color: #454545;
     padding: 15px;
     color: white;
     text-align: center;
+}
+main{
+    display: flex;
+}
+main div{
+    padding:15px;
+}
+@media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+    }
 }
