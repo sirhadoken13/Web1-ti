@@ -25,12 +25,18 @@
 
             x = 3;
             let y = 4;
+            let z = 2
 
-            function add(){
-                return x + y;
+            function add() {
+                return x + y + z;
             }
 
-            document.write(add(x,y));
+            function substract(a, b){
+                return a - b;
+            }
+
+            document.write("<br>" + add ( x , y , z ) ) ;
+            document.write("<br>" + substract(y, z)) ;
 
             // myNael();
         </script>
