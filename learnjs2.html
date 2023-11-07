@@ -36,10 +36,23 @@
             }
 
             document.write("<br>" + add ( x , y , z ) ) ;
-            document.write("<br>" + substract(y, z)) ;
+            document.write("<br>" + substract(y, z) + "<br>") ;
 
             // myNael();
         </script>
+<br>
+<br>
+Name:   <input id="name" type="text"> <button onclick="display()">Send!!</button>
+
+<script>
+    function display() {
+        let name = document.getElementById("name").value;
+        alert("Hello! " + name);
+        document.getElementById("ds").innerHTML = name;
+    }
+
+</script>
+    <h2 id="ds"></h2>
     </body>
     <footer>
 
