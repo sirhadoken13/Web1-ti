@@ -1,0 +1,53 @@
+<!--This code created by Nathanael Lubis-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <h1>A very simple JS Calculator</h1>
+        <b>Input:</b> <input id="firstNum" type="text">
+        <select id="operator">
+            <option value="tambah">+</option>
+            <option value="kurang">-</option>
+            <option value="bagi">/</option>
+            <option value="kali">*</option>
+        </select>
+        <input id="secNum" type="text"> <button onclick="menghitung()">Calculate</button><br><br>
+        <b>Result:</b> <input id="result" type="text" disabled>
+        <script>
+            function menghitung() {
+                const operator = document.getElementById('operator').value;
+                const firstNum = parseFloat(document.getElementById('firstNum').value);
+                const secNum = parseFloat(document.getElementById('secNum').value);
+
+                if(isNaN(firstNum) || isNaN(secNum)) {
+                    document.getElementById('result').value = 'Invalid input';
+                } else {
+                    let result;
+                    switch (operator) {
+                        case 'tambah' :
+                            result = firstNum + secNum;
+                            break;
+                        case 'kurang' :
+                            result = firstNum - secNum;
+                            break;
+                        case 'bagi' :
+                            if (secNum === 0) {
+                                result = 'Devision by Zero';
+                            } else {
+                                result = firstNum / secNum;
+                            }
+                            break;
+                        case 'kali' :
+                            result = firstNum * secNum;
+                            break;
+                    }
+                    document.getElementById('result').value = result;
+                }
+            }
+        </script>
+    </body>
+</html>
